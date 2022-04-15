@@ -1,0 +1,11 @@
+<div>
+    <div>entropy("123456") = <span id="result"></span></div>
+    <script type="module">
+      import init, {entropy} from "./pkg/entropy_wasm.js";
+      init()
+        .then(() => {
+          let value = entropy("123456");
+          document.getElementById("result").innerText = value;
+        });
+    </script>
+</div>
